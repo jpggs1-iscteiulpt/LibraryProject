@@ -1,10 +1,46 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Main {
 	
+	private static Biblioteca b;
 	private GUI i;
 	
 	public static void main(String[] args) {
 		GUI i = new GUI();
 	}
+	
+	
+	public static boolean lerFicheiro(String nomeFicheiro) {
+		if(nomeFicheiro == null) return false;
+		try {
+            File ficheiro = new File(nomeFicheiro);
+            Scanner LeitorFicheiro = new Scanner(ficheiro);
+            while (LeitorFicheiro.hasNextLine()) {
+                String linha = LeitorFicheiro.nextLine();  
+                String dados[] = linha.split(";");
+
+                long id = Integer.parseInt(dados[0]);
+                String titulo = dados[1];
+                String autor = dados[2];
+                String editora = dados[3];
+                String ediçao = dados[4];
+                String ano = dados[5];
+                
+                Livro livro = new Livro(id, titulo, autor, editora, ediçao, ano);
+                b.addLivro(livro);
+            }
+
+            LeitorFicheiro.close();
+        } catch (FileNotFoundException exception) {
+            String mensagem = "Erro: o ficheiro " + nomeFicheiro
+                    + "não foi encontrado.";
+            System.out.println(mensagem);
+        }
+		return true;
+	}
+			
+
 
 }

@@ -1,14 +1,14 @@
 
 public class Livro {
 	
-	private int id;
+	private long id;
 	private String titulo;
 	private String autor;
 	private String editora;
 	private String ediçao;
 	private String ano;
 	
-	public Livro (int id, String titulo, String autor, String editora, String ediçao, String ano) { 
+	public Livro (long id, String titulo, String autor, String editora, String ediçao, String ano) { 
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;

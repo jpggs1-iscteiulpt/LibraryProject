@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Biblioteca {
-	private List<Livro> livros;
+	private static List<Livro> livros;
 
 	public Biblioteca() {
-		this.livros = new ArrayList<>();
+		Biblioteca.livros = new ArrayList<>();
 	}
 
-	public boolean addLivro(Livro l) {
+	public static boolean addLivro(Livro l) {
 		if (l == null)
 			return false;
 		if (livros.contains(l)) {
@@ -18,14 +18,14 @@ class Biblioteca {
 		return livros.add(l);
 	}
 
-	public boolean removeLivro(Livro l) {
+	public static boolean removeLivro(Livro l) {
 		if (l == null)
 			return false;
 
 		return livros.remove(l);
 	}
 
-	public boolean atualizarLivro(Livro l, String variavel) {
+	public static boolean atualizarLivro(Livro l, String variavel) {
 		if (l == null)
 			return false;
 		if (variavel == null) {
@@ -45,7 +45,7 @@ class Biblioteca {
 		return false; // POR ACABAR
 	}
 
-	public List<Livro> procurarLivro(String tipoProcura, String valor) {
+	public static List<Livro> procurarLivro(String tipoProcura, String valor) {
 		switch (tipoProcura) {
 		case "Título":
 			return procurarPorTitulo(valor);
@@ -61,7 +61,7 @@ class Biblioteca {
 		}
 	}
 
-	private List<Livro> procurarPorTitulo(String valor) {
+	private static List<Livro> procurarPorTitulo(String valor) {
 		List<Livro> retorno = null;
 		for(Livro l : livros) {
 			if(l.getTitulo().equals(valor)) {
@@ -72,7 +72,7 @@ class Biblioteca {
 		else return retorno;
 	}
 
-	private List<Livro> procurarPorAutor(String valor) {
+	private static List<Livro> procurarPorAutor(String valor) {
 		List<Livro> retorno = null;
 		for(Livro l : livros) {
 			if(l.getAutor().equals(valor)) {
@@ -83,7 +83,7 @@ class Biblioteca {
 		else return retorno;
 	}
 	
-	private List<Livro> procurarPorEditora(String valor) {
+	private static List<Livro> procurarPorEditora(String valor) {
 		List<Livro> retorno = null;
 		for(Livro l : livros) {
 			if(l.getEditora().equals(valor)) {
@@ -94,7 +94,7 @@ class Biblioteca {
 		else return retorno;
 	}
 
-	private List<Livro> procurarPorAno(String valor) {
+	private static List<Livro> procurarPorAno(String valor) {
 		List<Livro> retorno = null;
 		for(Livro l : livros) {
 			if(l.getAno().equals(valor)) {
