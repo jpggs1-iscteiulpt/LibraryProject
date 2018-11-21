@@ -1,10 +1,10 @@
 
 public class Main {
 	
-	private Interface i;
+	private GUI i;
 	
 	public static void main(String[] args) {
-		Interface i = new Interface();
+		GUI i = new GUI();
 	}
 
 }

@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.WindowConstants;
 
-public class Interface {
+public class GUI {
 	
 	private JFrame frame = new JFrame();
 	private JPanel topPanel = new JPanel();
@@ -22,7 +22,7 @@ public class Interface {
 //	private JSplitPane bottom = new JSplitPane();
 	private JScrollPane scroll;
 	
-	public Interface() {
+	public GUI() {
 		buildInterface();
 	}
 	
