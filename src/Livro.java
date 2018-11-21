@@ -18,7 +18,6 @@ public class Livro {
 	}
 	
 	public String getTitulo() {
-		System.out.println("Teste");
 		return titulo;
 	}
 	public String getAutor() {
