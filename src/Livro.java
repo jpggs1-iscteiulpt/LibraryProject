@@ -7,14 +7,16 @@ public class Livro {
 	private String editora;
 	private String ediçao;
 	private String ano;
+	private String tema;
 	
-	public Livro (long id, String titulo, String autor, String editora, String ediçao, String ano) { 
+	public Livro (long id, String titulo, String autor, String editora, String ediçao, String ano, String tema) { 
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.editora = editora;
 		this.ediçao = ediçao;
 		this.ano = ano;
+		this.tema = tema;
 	}
 	
 	public String getTitulo() {
@@ -31,6 +33,9 @@ public class Livro {
 	}
 	public String getAno() {
 		return ano;
+	}
+	public String getTema() {
+		return tema;
 	}
 	
 	public void setEdiçao(String ediçao) {

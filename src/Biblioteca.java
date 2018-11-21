@@ -45,7 +45,7 @@ class Biblioteca {
 		return false; // POR ACABAR
 	}
 
-	public static List<Livro> procurarLivro(String tipoProcura, String valor) {
+	public static List<Livro> procurarLivros(String tipoProcura, String valor) {
 		switch (tipoProcura) {
 		case "Título":
 			return procurarPorTitulo(valor);
@@ -55,10 +55,23 @@ class Biblioteca {
 			return procurarPorEditora(valor);
 		case "Ano":
 			return procurarPorAno(valor);
+		case "Tema":
+			return procurarPorTema(valor);
 		default:
 			System.out.println("Variavel inválida");
 			return null;
 		}
+	}
+
+	private static List<Livro> procurarPorTema(String valor) {
+		List<Livro> retorno = null;
+		for(Livro l : livros) {
+			if(l.getTema().equals(valor)) {
+				retorno.add(l);
+			}
+		}
+		if(retorno.isEmpty()) return null;
+		else return retorno;
 	}
 
 	private static List<Livro> procurarPorTitulo(String valor) {
