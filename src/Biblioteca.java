@@ -5,7 +5,7 @@ class Biblioteca {
 	private static List<Livro> livros;
 
 	public Biblioteca() {
-		Biblioteca.livros = new ArrayList<>();
+		this.livros = new ArrayList<>();
 	}
 
 	public static boolean addLivro(Livro l) {
@@ -83,7 +83,7 @@ class Biblioteca {
 		else return retorno;
 	}
 	
-	private static List<Livro> procurarPorEditora(String valor) {
+	private static  List<Livro> procurarPorEditora(String valor) {
 		List<Livro> retorno = null;
 		for(Livro l : livros) {
 			if(l.getEditora().equals(valor)) {
