@@ -8,7 +8,7 @@ public class Livro {
 	private String ediçao;
 	private String ano;
 	
-	public Livro (int id, String titulo, String autor, String editora, String ediçao, String ano) { //CRL pá
+	public Livro (int id, String titulo, String autor, String editora, String ediçao, String ano) { 
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
