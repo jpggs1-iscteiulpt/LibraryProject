@@ -17,9 +17,8 @@ public class Livro {
 		this.ano = ano;
 	}
 	
-	
-	
 	public String getTitulo() {
+		System.out.println("Teste");
 		return titulo;
 	}
 	public String getAutor() {
