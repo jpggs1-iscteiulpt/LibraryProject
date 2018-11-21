@@ -19,7 +19,6 @@ public class GUI {
 	private JPanel bottomPanel = new JPanel();
 	private JTextArea results;
 	private JTextField message = new JTextField();
-//	private JSplitPane bottom = new JSplitPane();
 	private JScrollPane scroll;
 	
 	public GUI() {
@@ -39,7 +38,6 @@ public class GUI {
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		bottomPanel.add(scroll);
 	
-		//topPanel.setLayout(mgr);
 	}
 
 	private void buildInterface() {
