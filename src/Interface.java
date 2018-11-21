@@ -12,6 +12,7 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.WindowConstants;
 
 public class Interface {
+	
 	private JFrame frame = new JFrame();
 	private JPanel topPanel = new JPanel();
 	private JButton searchButton = new JButton("Search");
@@ -26,7 +27,6 @@ public class Interface {
 	}
 	
 	
-	
 	private void addFrameContent() {
 		message.setPreferredSize(new Dimension(200,20));
 		topPanel.add(message);
@@ -38,12 +38,10 @@ public class Interface {
         results.setEditable(false); 
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		bottomPanel.add(scroll);
-
-
-		
+	
 		//topPanel.setLayout(mgr);
 	}
-	
+
 	private void buildInterface() {
 		frame = new JFrame("Library");
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
