@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 	
 	private static Biblioteca b;
-	private GUI i;
+	private static GUI gui;
 	
 	public static void main(String[] args) {
-		GUI i = new GUI();
+		gui = new GUI();
 		Biblioteca b = new Biblioteca();
 	}
 	
@@ -29,8 +29,8 @@ public class Main {
                 String ediçao = dados[4];
                 String ano = dados[5];
                 
-                Livro livro = new Livro(id, titulo, autor, editora, ediçao, ano);
-                b.addLivro(livro);
+//               Livro livro = new Livro(id, titulo, autor, editora, ediçao, ano);
+//                b.addLivro(livro);
             }
 
             LeitorFicheiro.close();
