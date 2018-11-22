@@ -3,13 +3,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-	
-	private static Biblioteca b;
+
 	private static GUI gui;
 	
 	public static void main(String[] args) {
-		gui = new GUI();
-		Biblioteca b = new Biblioteca();
 	}
 	
 	

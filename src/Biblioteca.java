@@ -2,11 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Biblioteca {
-	private static List<Livro> livros;
+	private static List<Livro> livros = new ArrayList<>();
+	private static Biblioteca biblioteca;
+	
 
-	public Biblioteca() {
-		this.livros = new ArrayList<>();
-	}
+
+    private Biblioteca() {
+    }
+ 
+    public static synchronized Biblioteca getInstance() {
+        if (biblioteca == null)
+            biblioteca = new Biblioteca();
+ 
+        return biblioteca;
+    }
 
 	public static boolean addLivro(Livro l) {
 		if (l == null)
