@@ -23,17 +23,17 @@ public class Main {
                 String titulo = dados[1];
                 String autor = dados[2];
                 String editora = dados[3];
-                String ediçao = dados[4];
+                String edicao = dados[4];
                 String ano = dados[5];
                 
-//               Livro livro = new Livro(id, titulo, autor, editora, ediçao, ano);
+//               Livro livro = new Livro(id, titulo, autor, editora, ediï¿½ao, ano);
 //                b.addLivro(livro);
             }
 
             LeitorFicheiro.close();
         } catch (FileNotFoundException exception) {
             String mensagem = "Erro: o ficheiro " + nomeFicheiro
-                    + "não foi encontrado.";
+                    + "nï¿½o foi encontrado.";
             System.out.println(mensagem);
         }
 		return true;
