@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Livro {
 	
@@ -46,7 +47,15 @@ public class Livro {
 	}
 	
 	public String toString() {
-		return titulo;
+		String sAutores = "";
+		for(int i = 0; i < autor.length; i++) {
+			if(i == autor.length - 1) {
+				sAutores +=  autor[i];
+			}else {
+				sAutores +=  autor[i] + " e ";
+			}
+		}
+		return titulo + " de " + sAutores;
 	}
 
 

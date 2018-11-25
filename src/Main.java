@@ -10,10 +10,12 @@ public class Main {
 	public static void main(String args []) {
 		lerFicheiro("Biblioteca.txt");
 		System.out.println("Numero de Livros lidos: " + Biblioteca.nmrLivros() + "\n");
+		/*
 		List<Livro> livros = Biblioteca.getInstance().getLivros();
 		for(Livro l : livros) {
 			System.out.println(l.getTitulo());
 		}
+		*/
 		gui = new GUI();
 	}
 
@@ -29,7 +31,7 @@ public class Main {
             	if(dados.length == 7) {
                 	String id = dados[0];
                     String titulo = dados[1];
-                    String [] autor = dados[2].split(",");
+                    String [] autor = dados[2].split(", ");
                     String editora = dados[3];
                     String edicao = dados[4];
                     String ano = dados[5];
@@ -42,8 +44,7 @@ public class Main {
             LeitorFicheiro.close();
             return true;
         } catch (FileNotFoundException exception) {
-            String mensagem = "Erro: o ficheiro " + nomeFicheiro
-                    + "nao foi encontrado.";
+            String mensagem = "Erro: o ficheiro " + nomeFicheiro + "nao foi encontrado.";
             System.out.println(mensagem);
         }
 		return false;

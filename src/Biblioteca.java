@@ -59,76 +59,82 @@ class Biblioteca {
 	}
 
 	public static List<Livro> procurarLivros(String tipoProcura, String valor) {
-		switch (tipoProcura) {
-		case "T�tulo":
+		switch (tipoProcura.toLowerCase()) {
+		case "mostrar todos os livros":
+			return getLivros();
+		case "porcurar livro por titulo":
 			return procurarPorTitulo(valor);
-		case "Autor":
+		case "procurar livro por autor":
 			return procurarPorAutor(valor);
-		case "Editora":
+		case "procurar livro por editora":
 			return procurarPorEditora(valor);
-		case "Ano":
+		case "procurar livro por ano":
 			return procurarPorAno(valor);
-		case "Tema":
+		case "procurar livro por tema":
 			return procurarPorTema(valor);
 		default:
-			System.out.println("Variavel inv�lida");
+			System.out.println("Variavel invalida");
 			return null;
 		}
 	}
 
+	
 	private static List<Livro> procurarPorTema(String valor) {
-		List<Livro> retorno = null;
+		if(valor == null) return null;
+		List<Livro> retorno = new ArrayList<>();
 		for(Livro l : livros) {
-			if(l.getTema().equals(valor)) {
+			if(l.getTema().toLowerCase().equals(valor.toLowerCase())) {
 				retorno.add(l);
 			}
 		}
-		if(retorno.isEmpty()) return null;
-		else return retorno;
+		return retorno;
 	}
 
 	private static List<Livro> procurarPorTitulo(String valor) {
-		List<Livro> retorno = null;
+		if(valor == null) return null;
+		List<Livro> retorno = new ArrayList<>();
 		for(Livro l : livros) {
-			if(l.getTitulo().equals(valor)) {
+			if(l.getTitulo().toLowerCase().equals(valor.toLowerCase())) {
 				retorno.add(l);
 			}
 		}
-		if(retorno.isEmpty()) return null;
-		else return retorno;
+		return retorno;
 	}
 
 	private static List<Livro> procurarPorAutor(String valor) {
-		List<Livro> retorno = null;
+		if(valor == null) return null;
+		List<Livro> retorno = new ArrayList<>();
 		for(Livro l : livros) {
-			if(l.getAutor().equals(valor)) {
-				retorno.add(l);
+			for(String autor : l.getAutor()) {
+				if(autor.toLowerCase().equals(valor.toLowerCase())) {
+					retorno.add(l);
+				}
 			}
+				
 		}
-		if(retorno.isEmpty()) return null;
-		else return retorno;
+		return retorno;
 	}
 	
-	private static  List<Livro> procurarPorEditora(String valor) {
-		List<Livro> retorno = null;
+	private static List<Livro> procurarPorEditora(String valor) {
+		if(valor == null) return null;
+		List<Livro> retorno = new ArrayList<>();
 		for(Livro l : livros) {
-			if(l.getEditora().equals(valor)) {
+			if(l.getEditora().toLowerCase().equals(valor.toLowerCase())) {
 				retorno.add(l);
 			}
 		}
-		if(retorno.isEmpty()) return null;
-		else return retorno;
+		return retorno;
 	}
 
 	private static List<Livro> procurarPorAno(String valor) {
-		List<Livro> retorno = null;
+		if(valor == null) return null;
+		List<Livro> retorno = new ArrayList<>();
 		for(Livro l : livros) {
 			if(l.getAno().equals(valor)) {
 				retorno.add(l);
 			}
 		}
-		if(retorno.isEmpty()) return null;
-		else return retorno;
+		return retorno;
 	}
 
 	public static List<Livro> getLivros() {

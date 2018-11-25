@@ -28,7 +28,7 @@ public class GUI {
 	private JFrame frameLogin = new JFrame();
 	private JFrame frameAIR = new JFrame();
 	private JPanel topPanel = new JPanel();
-	private JButton searchButton = new JButton("Search");
+	private JButton searchButton = new JButton("Procurar");
 	private JPanel bottomPanel = new JPanel();
 	private JTextArea results;
 	private JTextField message = new JTextField();
@@ -42,7 +42,7 @@ public class GUI {
 	
 	private void buildLogin() {
 		
-		String[] comboOptions = { "Procurar", "Atualizar", "Inserir", "Remover" };
+		String[] comboOptions = { "Procurar Livros", "Atualizar um Livro", "Inserir Novo Livro", "Remover um Livro" };
 		JComboBox Options = new JComboBox(comboOptions);
 		JTextField user = new JTextField("Username");
 		JPasswordField pass = new JPasswordField("Password");
@@ -63,15 +63,13 @@ public class GUI {
 				frameLogin.dispatchEvent(new WindowEvent(frameLogin, WindowEvent.WINDOW_CLOSING));
 				String option = (String) Options.getSelectedItem();
 				//System.out.println(option);
-				if(option.equals("Procurar")) 
+				if(option.equals("Procurar Livros")) 
 					buildSearchFrame();
 				else
 					buildAIRFrame();
 			}
-
 		});
 	}
-
 
 	private void buildAIRFrame() {
 		JTextField valueTitulo = new JTextField();
@@ -84,7 +82,7 @@ public class GUI {
 		JLabel tituloLabel = new JLabel (" Titulo	");
 		JLabel autorLabel = new JLabel (" Autor	");
 		JLabel editoraLabel = new JLabel(" Editora	");
-		JLabel edicaoLabel = new JLabel(" EdiÃ§Ã£o	");
+		JLabel edicaoLabel = new JLabel(" Edição	");
 		JLabel anoLabel = new JLabel(" Ano	");
 		JLabel temaLabel = new JLabel(" Tema	");
 		JPanel labelPanel = new JPanel(new GridLayout(7,1));
@@ -126,7 +124,8 @@ public class GUI {
 		frame.setLocation(500, 330);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
-		String[] comboOptions = { "Titulo", "Autor", "Editora", "Ano", "Tema" };
+		String[] comboOptions = {"Mostrar todos os livros", "Procurar livro por Titulo", "Procurar livro por Autor",
+				"Procurar livro por Editora", "Procurar livro por Ano", "Procurar livro por Tema"};
 		comboBox = new JComboBox(comboOptions);
 		topPanel.add(comboBox);
 		message.setPreferredSize(new Dimension(200,20));
@@ -145,12 +144,19 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 				
 				String value = message.getText();
-				String option = (String) comboBox.getSelectedItem();
-				List<Livro> resultadoLivros = Biblioteca.getInstance().procurarLivros(option, value);
-				results.append(resultadoLivros.toString());
+				String option = (String)comboBox.getSelectedItem();
+				Biblioteca.getInstance();
+				List<Livro> resultadoLivros = Biblioteca.procurarLivros(option, value);
+				//System.out.println(resultadoLivros);
+				if(resultadoLivros == null) {
+					results.append("Não existe nenhum livro com as especificações pedidas \n");
+				}else {
+					for(Livro l : resultadoLivros) {
+						results.append(l.toString() + "\n");
+					}
+					//results.append(resultadoLivros.toString());
+				}
 				
-				
-					
 			}
 
 		});
