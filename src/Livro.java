@@ -1,7 +1,7 @@
 
 public class Livro {
 	
-	private long id;
+	private String id;
 	private String titulo;
 	private String [] autor;
 	private String editora;
@@ -9,7 +9,8 @@ public class Livro {
 	private String ano;
 	private String tema;
 	
-	public Livro (long id, String titulo, String [] autor, String editora, String edicao, String ano, String tema) { 
+	public Livro (String id, String titulo, String [] autor, String editora, String edicao, String ano, String tema) { 
+		
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
@@ -19,6 +20,7 @@ public class Livro {
 		this.tema = tema;
 		
 	}
+	
 	
 	public String getTitulo() {
 		return titulo;
@@ -41,6 +43,10 @@ public class Livro {
 	
 	public void setEdicao(String edicao) {
 		this.edicao = edicao;
+	}
+	
+	public String toString() {
+		return titulo;
 	}
 
 

@@ -1,10 +1,10 @@
-1;A Biblia do Treinador Pessoal;Pedro de Medeiros;Self;1;2015;Desporto
+﻿1;A Biblia do Treinador Pessoal;Pedro de Medeiros;Self;1;2015;Desporto
 2;Dicas do Salgueiro;Bruno Salgueiro;Oficina do Livro;1;2015;Desporto
-3;Alimenta��o Cura Tudo;Mehmet Oz;Lua de Papel;1;2018;Alimenta��o
-4;A Vi�va Negra;Daniel Silva;Harper Collins;1;2017;Policial
-5;Quinta-feira e outros dias;An�bal Cavaco Silva;Porto Editora;1;2017;Biografia
-6:Medo: Trump na Casa Branca;Bob Woodward;Dom Quixote;1;2018;Biografia
-7;Mentes Digitais;Arlindo Oliveira;IST- Instituto Superior Tecnico;1;2017;Inform�tica
-8;Linguagens Web;Alexandre Pereira, Carlos Poupa;Edi��es S�labo;6;2017;Inform�tica
-9;C�digo C�vil;N�o Fa�o Ideia;Porto Editora;12;2018;Direito
-10;Bush em Guerra;Bob Woodward;Gradiva;1;2003;Pol�tica
+3;Alimentacao Cura Tudo;Mehmet Oz;Lua de Papel;1;2018;Alimentaco
+4;A Viuva Negra;Daniel Silva;Harper Collins;1;2017;Policial
+5;Quinta-feira e outros dias;Anibal Cavaco Silva;Porto Editora;1;2017;Biografia
+6;Medo: Trump na Casa Branca;Bob Woodward;Dom Quixote;1;2018;Biografia
+7;Mentes Digitais;Arlindo Oliveira;IST - Instituto Superior Tecnico;1;2017;Informatica
+8;Linguagens Web;Alexandre Pereira, Carlos Poupa;Edicoes Silabo;6;2017;Informatica
+9;Codigo Civil;Nao Faco Ideia;Porto Editora;12;2018;Direito
+10;Bush em Guerra;Bob Woodward;Gradiva;1;2003;Politica

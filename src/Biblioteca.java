@@ -16,12 +16,16 @@ class Biblioteca {
  
         return biblioteca;
     }
-
+    
+    public static int nmrLivros() {
+		return livros.size();
+	}
+    
 	public static boolean addLivro(Livro l) {
 		if (l == null)
 			return false;
 		if (livros.contains(l)) {
-			System.out.println("Esse livro j� existe");
+			System.out.println("Esse livro ja existe");
 			return false;
 		}
 		return livros.add(l);
