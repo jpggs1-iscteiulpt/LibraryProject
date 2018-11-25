@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String args []) {
 		lerFicheiro("Biblioteca.txt");
 		System.out.println("Numero de Livros lidos: " + Biblioteca.nmrLivros() + "\n");
-		List<Livro> livros = Biblioteca.getLivros();
+		List<Livro> livros = Biblioteca.getInstance().getLivros();
 		for(Livro l : livros) {
 			System.out.println(l.getTitulo());
 		}
@@ -36,7 +36,7 @@ public class Main {
                     String tema = dados[6];
                     
                     Livro livro = new Livro(id, titulo, autor, editora, edicao, ano, tema);
-                    Biblioteca.addLivro(livro);
+                    Biblioteca.getInstance().addLivro(livro);
                 }
             }
             LeitorFicheiro.close();
