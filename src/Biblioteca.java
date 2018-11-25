@@ -21,7 +21,7 @@ class Biblioteca {
 		if (l == null)
 			return false;
 		if (livros.contains(l)) {
-			System.out.println("Esse livro já existe");
+			System.out.println("Esse livro jï¿½ existe");
 			return false;
 		}
 		return livros.add(l);
@@ -38,16 +38,16 @@ class Biblioteca {
 		if (l == null)
 			return false;
 		if (variavel == null) {
-			System.out.println("Diga o que informação pertende atualizar");
+			System.out.println("Diga o que informaï¿½ï¿½o pertende atualizar");
 			return false;
 		}
 		switch (variavel) {
-		case "Título": // chama um metodo
+		case "Tï¿½tulo": // chama um metodo
 			break;
-		case "Edição": // chama um metodo
+		case "Ediï¿½ï¿½o": // chama um metodo
 			break;
 		default:
-			System.out.println("Variavel inválida");
+			System.out.println("Variavel invï¿½lida");
 			break;
 		}
 
@@ -56,7 +56,7 @@ class Biblioteca {
 
 	public static List<Livro> procurarLivros(String tipoProcura, String valor) {
 		switch (tipoProcura) {
-		case "Título":
+		case "Tï¿½tulo":
 			return procurarPorTitulo(valor);
 		case "Autor":
 			return procurarPorAutor(valor);
@@ -67,7 +67,7 @@ class Biblioteca {
 		case "Tema":
 			return procurarPorTema(valor);
 		default:
-			System.out.println("Variavel inválida");
+			System.out.println("Variavel invï¿½lida");
 			return null;
 		}
 	}
@@ -125,6 +125,10 @@ class Biblioteca {
 		}
 		if(retorno.isEmpty()) return null;
 		else return retorno;
+	}
+
+	public static List<Livro> getLivros() {
+		return livros;
 	}
 
 }
