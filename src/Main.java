@@ -7,6 +7,7 @@ public class Main {
 	private static GUI gui;
 	
 	public static void main(String[] args) {
+		//lerFicheiro()
 		gui = new GUI();
 	}
 	

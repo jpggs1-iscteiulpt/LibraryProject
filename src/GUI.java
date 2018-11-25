@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 import java.io.FileNotFoundException;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -142,9 +143,13 @@ public class GUI {
 		frame.setVisible(true);
 		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				String value = message.getText();
 				String option = (String) comboBox.getSelectedItem();
-				Biblioteca.getInstance().procurarLivros(option, value);
+				List<Livro> resultadoLivros = Biblioteca.getInstance().procurarLivros(option, value);
+				results.append(resultadoLivros.toString());
+				
+				
 					
 			}
 
