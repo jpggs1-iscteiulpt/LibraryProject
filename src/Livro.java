@@ -3,13 +3,13 @@ public class Livro {
 	
 	private long id;
 	private String titulo;
-	private String autor;
+	private String [] autor;
 	private String editora;
 	private String edicao;
 	private String ano;
 	private String tema;
 	
-	public Livro (long id, String titulo, String autor, String editora, String edicao, String ano, String tema) { 
+	public Livro (long id, String titulo, String [] autor, String editora, String edicao, String ano, String tema) { 
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
@@ -23,7 +23,7 @@ public class Livro {
 	public String getTitulo() {
 		return titulo;
 	}
-	public String getAutor() {
+	public String[] getAutor() {
 		return autor;
 	}
 	public String getEditora() {

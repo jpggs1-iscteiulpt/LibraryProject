@@ -23,13 +23,14 @@ public class Main {
 
                 long id = Integer.parseInt(dados[0]);
                 String titulo = dados[1];
-                String autor = dados[2];
+                String [] autor = dados[2].split(",");
                 String editora = dados[3];
                 String edicao = dados[4];
                 String ano = dados[5];
+                String tema = dados[6];
                 
-//               Livro livro = new Livro(id, titulo, autor, editora, edi�ao, ano);
-//                b.addLivro(livro);
+                Livro livro = new Livro(id, titulo, autor, editora, edicao, ano, tema);
+                Biblioteca.addLivro(livro);
             }
 
             LeitorFicheiro.close();
