@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
@@ -72,16 +73,49 @@ public class GUI {
 
 
 	private void buildAIRFrame() {
-		JTextField value = new JTextField();
+		JTextField valueTitulo = new JTextField();
+		JTextField valueAutor = new JTextField();
+		JTextField valueEditora = new JTextField();
+		JTextField valueEdicao = new JTextField();
+		JTextField valueAno = new JTextField();
+		JTextField valueTema = new JTextField();
 		JButton enterButton = new JButton("Enter");
-		frameAIR.setPreferredSize(new Dimension(200,100));;
+		JLabel tituloLabel = new JLabel (" Titulo	");
+		JLabel autorLabel = new JLabel (" Autor	");
+		JLabel editoraLabel = new JLabel(" Editora	");
+		JLabel edicaoLabel = new JLabel(" Edição	");
+		JLabel anoLabel = new JLabel(" Ano	");
+		JLabel temaLabel = new JLabel(" Tema	");
+		JPanel labelPanel = new JPanel(new GridLayout(7,1));
+		JPanel valuePanel = new JPanel(new GridLayout(7,1));
+		JPanel buttonPanel = new JPanel();
+		
+		frameAIR.setPreferredSize(new Dimension(400,300));;
 		frameAIR.setLocation(500, 330);
 		frameAIR.pack();
 		frameAIR.setVisible(true);
 		frameAIR.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frameAIR.setLayout(new BorderLayout());
-		frameAIR.add(value, BorderLayout.NORTH);
-		frameAIR.add(enterButton, BorderLayout.CENTER);
+		
+		labelPanel.add(tituloLabel);
+		valuePanel.add(valueTitulo);
+		labelPanel.add(autorLabel);
+		valuePanel.add(valueAutor);
+		labelPanel.add(editoraLabel);
+		valuePanel.add(valueEditora);
+		labelPanel.add(edicaoLabel);
+		valuePanel.add(valueEdicao);
+		labelPanel.add(anoLabel);
+		valuePanel.add(valueAno);
+		labelPanel.add(anoLabel);
+		valuePanel.add(valueAno);
+		labelPanel.add(temaLabel);
+		valuePanel.add(valueTema);
+		buttonPanel.add(enterButton);
+		
+		frameAIR.add(labelPanel, BorderLayout.WEST);
+		frameAIR.add(valuePanel,BorderLayout.CENTER);
+		frameAIR.add(buttonPanel,BorderLayout.SOUTH);
 		
 	}
 
