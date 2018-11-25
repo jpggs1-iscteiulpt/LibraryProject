@@ -1,0 +1,10 @@
+1;A Biblia do Treinador Pessoal;Pedro de Medeiros;Self;1;2015;Desporto
+2;Dicas do Salgueiro;Bruno Salgueiro;Oficina do Livro;1;2015;Desporto
+3;Alimentação Cura Tudo;Mehmet Oz;Lua de Papel;1;2018;Alimentação
+4;A Viúva Negra;Daniel Silva;Harper Collins;1;2017;Policial
+5;Quinta-feira e outros dias;Aníbal Cavaco Silva;Porto Editora;1;2017;Biografia
+6:Medo: Trump na Casa Branca;Bob Woodward;Dom Quixote;1;2018;Biografia
+7;Mentes Digitais;Arlindo Oliveira;IST- Instituto Superior Tecnico;1;2017;Informática
+8;Linguagens Web;Alexandre Pereira, Carlos Poupa;Edições Sílabo;6;2017;Informática
+9;Código Cívil;Não Faço Ideia;Porto Editora;12;2018;Direito
+10;Bush em Guerra;Bob Woodward;Gradiva;1;2003;Política

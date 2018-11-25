@@ -62,7 +62,7 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 				frameLogin.dispatchEvent(new WindowEvent(frameLogin, WindowEvent.WINDOW_CLOSING));
 				String option = (String) Options.getSelectedItem();
-				System.out.println(option);
+				//System.out.println(option);
 				if(option.equals("Procurar")) 
 					buildSearchFrame();
 				else
