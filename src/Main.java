@@ -1,22 +1,14 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.List;
+//import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
-	private static GUI gui;
-
 	public static void main(String args []) {
 		lerFicheiro("Biblioteca.txt");
 		System.out.println("Numero de Livros lidos: " + Biblioteca.nmrLivros() + "\n");
-		/*
-		List<Livro> livros = Biblioteca.getInstance().getLivros();
-		for(Livro l : livros) {
-			System.out.println(l.getTitulo());
-		}
-		*/
-		gui = new GUI();
+		new GUI();
 	}
 
 	public static boolean lerFicheiro(String nomeFicheiro) {
@@ -38,7 +30,8 @@ public class Main {
                     String tema = dados[6];
                     
                     Livro livro = new Livro(id, titulo, autor, editora, edicao, ano, tema);
-                    Biblioteca.getInstance().addLivro(livro);
+                    Biblioteca.getInstance();
+					Biblioteca.addLivro(livro);
                 }
             }
             LeitorFicheiro.close();

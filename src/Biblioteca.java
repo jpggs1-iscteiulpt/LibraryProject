@@ -110,7 +110,6 @@ class Biblioteca {
 					retorno.add(l);
 				}
 			}
-				
 		}
 		return retorno;
 	}

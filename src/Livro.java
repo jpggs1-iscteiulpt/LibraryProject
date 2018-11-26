@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class Livro {
 	
@@ -22,7 +22,9 @@ public class Livro {
 		
 	}
 	
-	
+	public String getId() {
+		return id;
+	}
 	public String getTitulo() {
 		return titulo;
 	}

@@ -142,7 +142,7 @@ public class GUI {
 		frame.setVisible(true);
 		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				results.removeAll();;
 				String value = message.getText();
 				String option = (String)comboBox.getSelectedItem();
 				Biblioteca.getInstance();
